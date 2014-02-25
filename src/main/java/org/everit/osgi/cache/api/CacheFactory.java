@@ -16,8 +16,6 @@
  */
 package org.everit.osgi.cache.api;
 
-import java.util.Map;
-
 import javax.cache.Cache;
 
 /**
@@ -25,15 +23,6 @@ import javax.cache.Cache;
  */
 public interface CacheFactory {
 
-    /**
-     * Method to get a javax.cache.Cache instance based on the given configuration.
-     * 
-     * @param maxEntries
-     *            Number of maximum entries in the cache
-     * @param params
-     *            Additional configurations
-     * @return
-     */
-    Cache<String, Object> createCache(int maxEntries, Map<String, ?> params);
+    <K, V> Cache<K, V> createCache(CacheConfiguration<K, V> configuration, ClassLoader classLoader);
 
 }
