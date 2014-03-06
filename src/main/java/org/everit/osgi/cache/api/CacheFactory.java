@@ -16,13 +16,21 @@
  */
 package org.everit.osgi.cache.api;
 
-import javax.cache.Cache;
-
 /**
- * A simple API that supports generating javax.cache.Cache instances.
+ * A simple API that supports generating cache instances. This interface should be provided as an OSGi service.
  */
 public interface CacheFactory {
 
-    <K, V> Cache<K, V> createCache(CacheConfiguration<K, V> configuration, ClassLoader classLoader);
+    /**
+     * Creates a key-value cache holder.
+     * 
+     * @param configuration
+     *            The configuration of the cache. The type of the configuration must come from the same source as the
+     *            caceh factory.
+     * @param classLoader
+     *            The classLoader that should be used during serializing and deserializing keys and values.
+     * @return The Cache holder. Should be closed in the end.
+     */
+    <K, V> CacheHolder<K, V> createCache(CacheConfiguration<K, V> configuration, ClassLoader classLoader);
 
 }

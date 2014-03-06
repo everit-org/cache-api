@@ -16,13 +16,27 @@
  */
 package org.everit.osgi.cache.api;
 
+import java.util.concurrent.ConcurrentMap;
+
 /**
- * Configuration of a cache that should be created.
+ * A Cache holder that can be created with {@link CacheFactory}.
  * 
  * @param <K>
- *            The type of the keys of the cache.
+ *            The type of the keys.
  * @param <V>
- *            The type of the value entries of the cache.
+ *            The type of the values.
  */
-public interface CacheConfiguration<K, V> {
+public interface CacheHolder<K, V> {
+
+    /**
+     * Closing the cache.
+     */
+    void close();
+
+    /**
+     * Getting the cache as a {@link ConcurrentMap}.
+     * 
+     * @return The cache.
+     */
+    ConcurrentMap<K, V> getCache();
 }
