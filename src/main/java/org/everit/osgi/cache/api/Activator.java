@@ -13,6 +13,7 @@ public class Activator implements BundleActivator {
         Dictionary<String, String> properties = new Hashtable<String, String>(1);
         properties.put("cacheName", "noop");
         context.registerService(CacheFactory.class, new NoOpCacheFactory(), properties);
+        context.registerService(CacheConfiguration.class, new NoOpCacheConfiguration<Object, Object>(), properties);
     }
 
     @Override
