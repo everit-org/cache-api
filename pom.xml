@@ -24,12 +24,12 @@
   <parent>
     <groupId>org.everit.config</groupId>
     <artifactId>org.everit.config.oss</artifactId>
-    <version>5.0.0</version>
+    <version>5.0.2</version>
   </parent>
 
   <groupId>org.everit.osgi</groupId>
   <artifactId>org.everit.osgi.cache.api</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.0</version>
   <packaging>bundle</packaging>
 
   <name>Everit - Cache API</name>
@@ -37,8 +37,8 @@
 
   <properties>
     <projectpath>cache-api</projectpath>
-    <maven.compiler.source>1.6</maven.compiler.source>
-    <maven.compiler.target>1.6</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
 
   <licenses>
