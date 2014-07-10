@@ -23,7 +23,7 @@ public interface CacheFactory {
 
     /**
      * Creates a key-value cache holder.
-     * 
+     *
      * @param configuration
      *            The configuration of the cache. The type of the configuration must come from the same source as the
      *            caceh factory.
