@@ -29,7 +29,7 @@
 
   <groupId>org.everit.osgi</groupId>
   <artifactId>org.everit.osgi.cache.api</artifactId>
-  <version>1.1.0</version>
+  <version>1.0.0</version>
   <packaging>bundle</packaging>
 
   <name>Everit - Cache API</name>
@@ -85,7 +85,7 @@
         <configuration>
           <instructions>
             <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-            <Bundle-Activator>org.everit.osgi.cache.api.CacheAPIActivator</Bundle-Activator>
+            <Bundle-Activator>org.everit.osgi.cache.api.internal.CacheAPIActivator</Bundle-Activator>
             <Import-Package>
               *
             </Import-Package>

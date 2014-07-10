@@ -14,13 +14,17 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with Everit - Cache API.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.everit.osgi.cache.api;
+package org.everit.osgi.cache.api.internal;
 
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentMap;
+
+import org.everit.osgi.cache.api.CacheConfiguration;
+import org.everit.osgi.cache.api.CacheFactory;
+import org.everit.osgi.cache.api.CacheHolder;
 
 public class NoOpCacheFactory implements CacheFactory {
 

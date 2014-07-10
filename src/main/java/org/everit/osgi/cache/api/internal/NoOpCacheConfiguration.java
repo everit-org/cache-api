@@ -14,7 +14,9 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with Everit - Cache API.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.everit.osgi.cache.api;
+package org.everit.osgi.cache.api.internal;
+
+import org.everit.osgi.cache.api.CacheConfiguration;
 
 public class NoOpCacheConfiguration<K, V> implements CacheConfiguration<K, V> {
 
