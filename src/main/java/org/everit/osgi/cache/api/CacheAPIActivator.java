@@ -21,20 +21,29 @@ import java.util.Hashtable;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
+import org.osgi.framework.ServiceRegistration;
 
-public class Activator implements BundleActivator {
+public class CacheAPIActivator implements BundleActivator {
+
+    private ServiceRegistration<CacheFactory> cacheFactoryRegistration;
+
+    @SuppressWarnings("rawtypes")
+    private ServiceRegistration<CacheConfiguration> cacheConfigRegistration;
 
     @Override
     public void start(final BundleContext context) throws Exception {
         Dictionary<String, String> properties = new Hashtable<String, String>(1);
         properties.put("cacheName", "noop");
-        context.registerService(CacheFactory.class, new NoOpCacheFactory(), properties);
-        context.registerService(CacheConfiguration.class, new NoOpCacheConfiguration<Object, Object>(), properties);
+        cacheFactoryRegistration = context.registerService(CacheFactory.class, new NoOpCacheFactory(),
+                properties);
+        cacheConfigRegistration = context.registerService(CacheConfiguration.class,
+                new NoOpCacheConfiguration<Object, Object>(), properties);
     }
 
     @Override
     public void stop(final BundleContext context) throws Exception {
-
+        cacheFactoryRegistration.unregister();
+        cacheConfigRegistration.unregister();
     }
 
 }
