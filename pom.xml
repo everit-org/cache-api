@@ -29,7 +29,7 @@
 
   <groupId>org.everit.osgi</groupId>
   <artifactId>org.everit.osgi.cache.api</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.0</version>
   <packaging>bundle</packaging>
 
   <name>Everit - Cache API</name>
@@ -81,16 +81,14 @@
       <plugin>
         <groupId>org.apache.felix</groupId>
         <artifactId>maven-bundle-plugin</artifactId>
+        <version>2.5.0</version>
         <extensions>true</extensions>
         <configuration>
           <instructions>
             <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
             <Bundle-Activator>org.everit.osgi.cache.api.internal.CacheAPIActivator</Bundle-Activator>
-            <Import-Package>
-              *
-            </Import-Package>
             <Export-Package>
-              ${project.artifactId}
+              ${project.artifactId};version="1.0.0"
             </Export-Package>
           </instructions>
         </configuration>
