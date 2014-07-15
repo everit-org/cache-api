@@ -29,7 +29,7 @@
 
   <groupId>org.everit.osgi</groupId>
   <artifactId>org.everit.osgi.cache.api</artifactId>
-  <version>1.1.0</version>
+  <version>2.0.0</version>
   <packaging>bundle</packaging>
 
   <name>Everit - Cache API</name>
@@ -56,10 +56,6 @@
   </scm>
   <url>http://everit.org</url>
 
-  <ciManagement>
-    <system>Jenkins</system>
-    <url>https://ci.everit.biz/jenkins/job/${projectpath}</url>
-  </ciManagement>
   <issueManagement>
     <system>GitHub</system>
     <url>https://github.com/everit-org/${projectpath}/issues</url>
@@ -85,10 +81,8 @@
         <extensions>true</extensions>
         <configuration>
           <instructions>
-            <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
-            <Bundle-Activator>org.everit.osgi.cache.api.internal.CacheAPIActivator</Bundle-Activator>
             <Export-Package>
-              ${project.artifactId};version="1.0.0"
+              org.everit.osgi.cache
             </Export-Package>
           </instructions>
         </configuration>

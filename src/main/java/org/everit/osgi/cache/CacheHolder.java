@@ -14,10 +14,29 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with Everit - Cache API.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.everit.osgi.cache.api.internal;
+package org.everit.osgi.cache;
 
-import org.everit.osgi.cache.api.CacheConfiguration;
+import java.util.concurrent.ConcurrentMap;
 
-public class NoOpCacheConfiguration<K, V> implements CacheConfiguration<K, V> {
+/**
+ * A Cache holder that can be created with {@link CacheFactory}.
+ * 
+ * @param <K>
+ *            Type of the keys.
+ * @param <V>
+ *            Type of the values.
+ */
+public interface CacheHolder<K, V> {
 
+    /**
+     * Closing the cache.
+     */
+    void close();
+
+    /**
+     * Getting the cache as a {@link ConcurrentMap}.
+     * 
+     * @return The cache.
+     */
+    ConcurrentMap<K, V> getCache();
 }

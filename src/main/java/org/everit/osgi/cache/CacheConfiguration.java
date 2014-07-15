@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with Everit - Cache API.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.everit.osgi.cache.api;
+package org.everit.osgi.cache;
 
 /**
  * Configuration of a cache that should be created.

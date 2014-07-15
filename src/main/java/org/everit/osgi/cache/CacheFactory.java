@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with Everit - Cache API.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.everit.osgi.cache.api;
+package org.everit.osgi.cache;
 
 /**
  * A simple API that supports generating cache instances. This interface should be provided as an OSGi service.
@@ -29,6 +29,10 @@ public interface CacheFactory {
      *            caceh factory.
      * @param classLoader
      *            The classLoader that should be used during serializing and deserializing keys and values.
+     * @param <K>
+     *            The type of the keys of the cache.
+     * @param <V>
+     *            The type of the value entries of the cache.
      * @return The Cache holder. Should be closed in the end.
      */
     <K, V> CacheHolder<K, V> createCache(CacheConfiguration<K, V> configuration, ClassLoader classLoader);
