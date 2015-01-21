@@ -1,3 +1,10 @@
+DEPRECATED
+==========
+
+As a cache we use a java.util.Map interface for simple cases and 
+java.util.concurrent.ConcurrentMap interface where thread safety counts.
+
+
 cache-api
 =========
 
