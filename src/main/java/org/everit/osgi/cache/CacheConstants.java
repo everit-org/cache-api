@@ -17,7 +17,6 @@
 package org.everit.osgi.cache;
 
 import java.util.Map;
-import java.util.concurrent.ConcurrentMap;
 
 /**
  * Constants that describes the configuration of the cache implementations.
@@ -30,12 +29,7 @@ public final class CacheConstants {
     public static final String PROP_CACHE_DRIVER_NAME = "cache.driver.name";
 
     /**
-     * The object class that should be implemented and registered by the implementation in case of thread safety.
-     */
-    public static final String OBJECT_CLASS_NAME_CONCURRENT_MAP = ConcurrentMap.class.getName();
-
-    /**
-     * The object class that should be implemented and registered by the implementation in simple cases.
+     * The object class that should be implemented and registered by the implementation at least.
      */
     public static final String OBJECT_CLASS_NAME_MAP = Map.class.getName();
 
