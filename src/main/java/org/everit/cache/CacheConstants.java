@@ -23,15 +23,15 @@ import java.util.Map;
 public final class CacheConstants {
 
   /**
-   * The object class that should be implemented and registered by the implementation at least.
-   */
-  public static final String OBJECT_CLASS_NAME_MAP = Map.class.getName();
-
-  /**
    * The service property name that describes the driver or the technique of the caching used by the
    * implementation.
    */
-  public static final String PROP_CACHE_DRIVER_NAME = "cache.driver.name";
+  public static final String ATTR_CACHE_DRIVER_NAME = "cache.driver.name";
+
+  /**
+   * The object class that should be implemented and registered by the implementation at least.
+   */
+  public static final String OBJECT_CLASS_NAME_MAP = Map.class.getName();
 
   private CacheConstants() {
   }
