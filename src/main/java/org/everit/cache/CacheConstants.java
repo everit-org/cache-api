@@ -31,7 +31,7 @@ public final class CacheConstants {
   /**
    * The object class that should be implemented and registered by the implementation at least.
    */
-  public static final String OBJECT_CLASS_NAME_MAP = Map.class.getName();
+  public static final Class<Map> OBJECT_CLASS_NAME_MAP = Map.class;
 
   private CacheConstants() {
   }
