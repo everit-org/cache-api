@@ -10,7 +10,7 @@ implementations:
  - **CacheConstants.PROP_CACHE_DRIVER_NAME** (*cache.driver.name*): The service 
  property name that describes the driver or the technique of the caching used 
  by the implementation.
- - **CacheConstants.OBJECT_CLASS_NAME_MAP** (*java.util.Map*): The object class
+ - **CacheConstants.OBJECT_CLASS_MAP** (*java.util.Map*): The object class
   that should be implemented and registered by an implementation at least.
 
 [![Analytics](https://ga-beacon.appspot.com/UA-15041869-4/everit-org/cache-api)](https://github.com/igrigorik/ga-beacon)
