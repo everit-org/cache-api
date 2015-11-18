@@ -1,4 +1,4 @@
 cache-api
 =========
 
-Documentation: http://wwww.everit.org/cache-api
+Documentation: http://www.everit.org/cache-api
